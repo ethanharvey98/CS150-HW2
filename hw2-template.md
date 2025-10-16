@@ -17,10 +17,9 @@ Q1 (5 points). *Please discussion the relationship between the following two met
 * *assuming that there is a true distribution and minimizing the KL-divergence from the true distribution to the model distribution*
 * *maximizing the log-likelihood of the data under the model*
 
-**Answer:** \textcolor{white}{[If you write your answer with hand, you can adjust the space as needed by changing the value in vspace. If you type in/paste your answer here, PLEASE REMOVE this line and the vspace below]}
+**Answer:**
 
-\vspace{2.5in}
-
+I prefer maximizing the log-likelihood of the data under the model, because it is directly computable from data and statistically consistent with minimizing the KL-divergence from the true distribution to the model distribution in theory. The KL view is elegant for theory; MLE is practical for real-world modeling.
 
 Q2. (5 points). *Suppose we have a set of observations $(x_i: i = 1, \ldots, n)$, and each $x_i \in \mathbb{R}$. Please use a Gaussian distribution with a fixed variance $\sigma^2$ to fit the data with Maximum Likelihood Estimation (MLE).*    
 
@@ -36,7 +35,7 @@ L(\mu) = \prod_{i=1}^n \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left( -\frac{(x_i -
 It is often easier to work with the log-likelihood $\sum_{i=1}^n \log \mathcal{N}(x_i \mid \mu, \sigma^2)$ which simplifies to
 ```math
 \begin{align*} 
-\ell(\mu) = -\frac{n}{2} \log \sqrt{2 \pi \sigma^2} - \frac{1}{2 \sigma^2} \sum_{i=1}^n (x_i - \mu)^2.
+\ell(\mu) = -\frac{n}{2} \log (2 \pi \sigma^2) - \frac{1}{2 \sigma^2} \sum_{i=1}^n (x_i - \mu)^2.
 \end{align*}
 ```
 
